@@ -17,14 +17,20 @@ int main(void)
         {5, 6, 7, 8, 9, 10}};
     int varr[rs][cs]; // 变长数组（VLA）
     for (i = 0; i < rs; i++)
+    {
         for (j = 0; j < cs; j++)
+        {
             varr[i][j] = i * j + j;
+            printf("[%d][%d]=%d ", i, j, i * j + j);
+        }
+        printf("\n");
+    }
     printf("3x5 array\n");
-    printf("Sum of all elements = %d\n", sum2d(ROWS, COLS,
-                                               junk));
+    printf("Sum of all elements = %d\n", sum2d(ROWS, COLS, junk));
+
     printf("2x6 array\n");
-    printf("Sum of all elements = %d\n", sum2d(ROWS - 1,
-                                               COLS + 2, morejunk));
+    printf("Sum of all elements = %d\n", sum2d(ROWS - 1, COLS + 2, morejunk));
+
     printf("3x10 VLA\n");
     printf("Sum of all elements = %d\n", sum2d(rs, cs, varr));
     return 0;
