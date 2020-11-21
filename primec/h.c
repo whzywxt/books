@@ -1,14 +1,18 @@
 #include <stdio.h>
 int main(void)
 {
-    int zippo[4][2] = {{2, 4}, {6, 8}, {1, 3}, {5, 7}};
-    printf("  zippo = %p,   zippo + 1 = %p\n", zippo, zippo + 1);
-    printf("zippo[0] = %p, zippo[0] + 1 = %p\n", zippo[0], zippo[0] + 1);
-    printf(" *zippo = %p,  *zippo + 1 = %p\n", *zippo, *zippo + 1);
-    printf("zippo[0][0] = %d\n", zippo[0][0]);
-    printf(" *zippo[0] = %d\n", *zippo[0]);
-    printf("  **zippo = %d\n", **zippo);
-    printf("    zippo[2][1] = %d\n", zippo[2][1]);
-    printf("*(*(zippo+2) + 1) = %d\n", *(*(zippo + 2) + 1));
+    int ref[] = {8, 4, 0, 2};
+    int *ptr;
+    int index;
+    for (index = 0, ptr = ref; index < 4; index++, ptr++)
+        printf("%d %d\n", ref[index], *ptr);
+
+    printf("ref = %p, ref + 1 = %p\n", ref, ref + 1);
+    --ptr;
+    // --ptr;
+    // --ptr;
+    // --ptr;
+    // *ptr++;
+    printf("ptr=%p, %d, %d\n", ptr, ptr, *ptr);
     return 0;
 }
