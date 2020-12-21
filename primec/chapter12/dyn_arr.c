@@ -15,6 +15,7 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
+    // 强制类型转换(double *)
     ptd = (double *)malloc(max * sizeof(double));
     if (ptd == NULL)
     {
