@@ -1,18 +1,12 @@
 #include <stdio.h>
 int main(void)
 {
-    int ref[] = {8, 4, 0, 2};
-    int *ptr;
-    int index;
-    for (index = 0, ptr = ref; index < 4; index++, ptr++)
-        printf("%d %d\n", ref[index], *ptr);
-
-    printf("ref = %p, ref + 1 = %p\n", ref, ref + 1);
-    --ptr;
-    // --ptr;
-    // --ptr;
-    // --ptr;
-    // *ptr++;
-    printf("ptr=%p, %d, %d\n", ptr, ptr, *ptr);
+    int cnt = 0, n = 20, m;
+    for (m = 1; m <= n; m = m * 10)
+    {
+        int a = n / m, b = n % m;
+        cnt += (a + 8) / 10 * m + (a % 10 == 1 ? b + 1 : 0);
+    }
+    printf("cnt=%d", cnt);
     return 0;
 }
