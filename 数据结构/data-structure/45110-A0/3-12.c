@@ -10,6 +10,7 @@ bool Push( Stack S, ElementType X )
 		return false;
 	}
 	else {
+		printf("X=%f\n", X);
 		S->Data[++(S->Top)] = X;
         return true;
     }

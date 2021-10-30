@@ -24,9 +24,9 @@ typedef struct SNode *Stack;
 
 #define ERROR -1 /* 当堆栈为空时返回错误，这里默认正确返回值全是正的 */
 
-#include "3-11.h"
-#include "3-12.h"
-#include "3-13.h"
+#include "3-11.c"
+#include "3-12.c"
+#include "3-13.c"
 /*****以上不出现在教材正文里*******/
 
 
