@@ -2,9 +2,20 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define ERROR -1;
+// #define ERROR -1;
+#define ERROR NULL;
 
-typedef int ElementType;
+typedef struct TNode *BinTree;
+struct TNode
+{
+    int Data;
+    struct TNode *Left;
+    struct TNode *Right;
+};
+
+typedef BinTree ElementType; /* 假设结点数据是整数 */
+
+// typedef int ElementType;
 typedef int Position;
 
 typedef struct QNode *PtrToQNode;
@@ -24,16 +35,16 @@ int main()
 {
     Queue Q = CreateQueue(5);
 
-    AddQ(Q, 1);
-    AddQ(Q, 2);
-    DeleteQ(Q);
-    DeleteQ(Q);
-    DeleteQ(Q);
-    AddQ(Q, 3);
-    AddQ(Q, 4);
-    AddQ(Q, 5);
-    AddQ(Q, 5);
-    AddQ(Q, 5);
+    // AddQ(Q, 1);
+    // AddQ(Q, 2);
+    // DeleteQ(Q);
+    // DeleteQ(Q);
+    // DeleteQ(Q);
+    // AddQ(Q, 3);
+    // AddQ(Q, 4);
+    // AddQ(Q, 5);
+    // AddQ(Q, 5);
+    // AddQ(Q, 5);
     
     return 0;
 }
